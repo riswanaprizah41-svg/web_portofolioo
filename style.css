@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* ===== HEADER ===== */
+header {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1, #a855f7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* FOTO PROFIL (hasil gabungan) */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 15px;
+}
+
+}
+
+/* Text header */
+header h1 {
+  font-size: 60px;
+  margin: 0;
+  letter-spacing: 3px;
+  z-index: 2;
+}
+
+header p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 15px;
+  z-index: 2;
+}
+
+/* glowing background */
+header::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  filter: blur(120px);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  bottom: -150px;
+  right: -100px;
+  filter: blur(120px);
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 999;
+}
+
+nav a {
+  color: #e5e7eb;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #38bdf8;
+  left: 0;
+  bottom: -8px;
+  transition: 0.4s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== SECTION ===== */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 120px 40px;
+}
+
+section h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== ABOUT ===== */
+#about p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cbd5f5;
+}
+
+/* ===== SKILLS ===== */
+#skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  transition: 0.4s;
+}
+
+.skill:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+  color: white;
+}
+
+/* ===== PROJECTS ===== */
+.project {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(168, 85, 247, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project:hover::before {
+  opacity: 1;
+}
+
+.project h3 {
+  color: #38bdf8;
+  font-size: 24px;
+}
+
+/* ===== CONTACT ===== */
+#contact p {
+  font-size: 18px;
+  color: #cbd5f5;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
+}
